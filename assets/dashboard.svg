@@ -1,1 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#020611"/><stop offset=".55" stop-color="#061426"/><stop offset="1" stop-color="#10051e"/>
+  </linearGradient>
+  <linearGradient id="cyan" x1="0" x2="1"><stop stop-color="#00d9ff"/><stop offset="1" stop-color="#5ee7ff"/></linearGradient>
+  <linearGradient id="purple" x1="0" x2="1"><stop stop-color="#9b5cff"/><stop offset="1" stop-color="#e58cff"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <style>
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+    .title{font-family:Arial,sans-serif;font-weight:700;letter-spacing:7px}
+    .panel{fill:#03101d;fill-opacity:.88;stroke:#00d9ff;stroke-opacity:.65}
+    .small{font-size:18px}.tiny{font-size:14px}
+  </style>
+</defs>
+<rect width="1600" height="1050" rx="22" fill="url(#bg)"/>
+<g opacity=".13" stroke="#1c9bd1"><path d="M0 80H1600M0 160H1600M0 240H1600M0 320H1600M0 400H1600M0 480H1600M0 560H1600M0 640H1600M0 720H1600M0 800H1600M0 880H1600M0 960H1600"/><path d="M80 0V1050M180 0V1050M280 0V1050M380 0V1050M480 0V1050M580 0V1050M680 0V1050M780 0V1050M880 0V1050M980 0V1050M1080 0V1050M1180 0V1050M1280 0V1050M1380 0V1050M1480 0V1050"/></g>
 
+<!-- Header -->
+<rect x="18" y="18" width="1564" height="52" rx="12" class="panel"/>
+<text x="42" y="51" fill="#e7fbff" class="mono small">RV.SYSTEMS</text>
+<text x="250" y="51" fill="#00d9ff" class="mono small">// NEURAL INTERFACE</text>
+<text x="1240" y="51" fill="#9fb9c8" class="mono small">SYSTEM STATUS:</text>
+<text x="1415" y="51" fill="#41ff83" class="mono small">● ONLINE</text>
+
+<!-- Hero -->
+<rect x="18" y="86" width="1030" height="290" rx="16" class="panel"/>
+<text x="52" y="145" fill="#dffbff" font-size="62" class="title">RV.AI OS</text>
+<text x="54" y="185" fill="#8eeeff" font-size="20" class="mono">ARTIFICIAL INTELLIGENCE • ENGINEERING • RESEARCH</text>
+<text x="54" y="230" fill="#00d9ff" font-size="17" class="mono">&gt; INITIALIZING PROFILE...</text>
+<text x="54" y="268" fill="#ffffff" font-size="32" class="mono">AARVEE WADHWA</text>
+<text x="54" y="300" fill="#b6d6e5" font-size="19" class="mono">AI/ML ENGINEER   •   RESEARCH BUILDER   •   PROBLEM SOLVER</text>
+<text x="54" y="342" fill="#41ff83" font-size="17" class="mono">MISSION: BUILD INTELLIGENT SYSTEMS THAT SOLVE REAL-WORLD PROBLEMS</text>
+
+<!-- Brain -->
+<g transform="translate(850 90)" filter="url(#glow)">
+  <circle cx="105" cy="125" r="112" fill="none" stroke="#00d9ff" stroke-opacity=".35" stroke-width="3"/>
+  <circle cx="105" cy="125" r="88" fill="none" stroke="#7d5cff" stroke-opacity=".45" stroke-width="2"/>
+  <path d="M105 54 C65 35 32 68 42 100 C18 124 37 156 62 157 C52 190 82 208 105 186
+           C128 208 158 190 148 157 C173 156 192 124 168 100 C178 68 145 35 105 54Z"
+        fill="#07172a" stroke="#00d9ff" stroke-width="4"/>
+  <path d="M105 55V186M72 70C95 88 93 112 70 128M138 70C115 88 117 112 140 128M65 157C88 145 93 165 105 175M145 157C122 145 117 165 105 175"
+        fill="none" stroke="#9b5cff" stroke-width="3"/>
+  <circle cx="105" cy="225" r="18" fill="#00d9ff" opacity=".7"/>
+  <path d="M105 205V225M60 225H150" stroke="#00d9ff" stroke-width="3"/>
+</g>
+
+<!-- Core modules -->
+<rect x="1070" y="86" width="512" height="290" rx="16" class="panel"/>
+<text x="1100" y="124" fill="#00d9ff" class="mono" font-size="20">CORE MODULES</text>
+<g class="mono">
+<text x="1100" y="165" fill="#dffbff" font-size="17">◉  NEURAL ENGINE</text><text x="1450" y="165" fill="#41ff83" font-size="15">ACTIVE</text>
+<text x="1100" y="207" fill="#dffbff" font-size="17">◉  COMPUTER VISION</text><text x="1435" y="207" fill="#41ff83" font-size="15">READY</text>
+<text x="1100" y="249" fill="#dffbff" font-size="17">◉  LLM / RAG CORE</text><text x="1435" y="249" fill="#41ff83" font-size="15">ACTIVE</text>
+<text x="1100" y="291" fill="#dffbff" font-size="17">◉  MULTI-AGENT SYS</text><text x="1435" y="291" fill="#41ff83" font-size="15">ONLINE</text>
+<text x="1100" y="333" fill="#dffbff" font-size="17">◉  AI EVALUATION</text><text x="1435" y="333" fill="#41ff83" font-size="15">BUILDING</text>
+</g>
+
+<!-- Tech -->
+<rect x="18" y="394" width="1564" height="104" rx="16" class="panel"/>
+<text x="44" y="426" fill="#00d9ff" class="mono" font-size="18">TECH STACK // TOOLS</text>
+<text x="55" y="465" fill="#e8fbff" class="mono small">Python   •   PyTorch   •   TensorFlow   •   Java   •   FastAPI   •   React   •   Node.js   •   MongoDB   •   MySQL   •   Docker   •   Git   •   LangChain   •   Neo4j   •   OpenCV</text>
+
+<!-- Projects -->
+<rect x="18" y="516" width="1564" height="218" rx="16" class="panel"/>
+<text x="44" y="550" fill="#00d9ff" class="mono" font-size="18">FEATURED PROJECTS</text>
+
+<g>
+<rect x="38" y="570" width="370" height="142" rx="12" fill="#071026" stroke="#b25cff" stroke-opacity=".8"/>
+<text x="60" y="603" fill="#d88cff" font-size="23" class="mono">JOY</text>
+<text x="60" y="630" fill="#ffffff" font-size="16" class="mono">AI THERAPIST</text>
+<text x="60" y="657" fill="#b9cddd" font-size="14" class="mono">Multimodal NLP + vision + speech</text>
+<text x="60" y="684" fill="#00d9ff" font-size="13" class="mono">RoBERTa • Wav2Vec2 • Swin</text>
+
+<rect x="425" y="570" width="370" height="142" rx="12" fill="#061523" stroke="#00d9ff" stroke-opacity=".8"/>
+<text x="447" y="603" fill="#00e5ff" font-size="23" class="mono">TRUTHGRAPH</text>
+<text x="447" y="630" fill="#ffffff" font-size="16" class="mono">EVIDENCE AI</text>
+<text x="447" y="657" fill="#b9cddd" font-size="14" class="mono">Dynamic graph for fact verification</text>
+<text x="447" y="684" fill="#00d9ff" font-size="13" class="mono">Llama 3.1 • Neo4j • LangChain</text>
+
+<rect x="812" y="570" width="370" height="142" rx="12" fill="#071525" stroke="#48ff68" stroke-opacity=".8"/>
+<text x="834" y="603" fill="#63ff77" font-size="23" class="mono">PERSONA</text>
+<text x="834" y="630" fill="#ffffff" font-size="16" class="mono">SAFETY NAVIGATION</text>
+<text x="834" y="657" fill="#b9cddd" font-size="14" class="mono">Personalized risk-aware routing</text>
+<text x="834" y="684" fill="#48ff68" font-size="13" class="mono">Python • ML • Maps • Safety</text>
+
+<rect x="1199" y="570" width="363" height="142" rx="12" fill="#180b12" stroke="#ff4d57" stroke-opacity=".8"/>
+<text x="1221" y="603" fill="#ff606b" font-size="23" class="mono">IDENTIF.AI</text>
+<text x="1221" y="630" fill="#ffffff" font-size="16" class="mono">FORENSIC AI</text>
+<text x="1221" y="657" fill="#b9cddd" font-size="14" class="mono">Narration → attributes → 3D</text>
+<text x="1221" y="684" fill="#ff606b" font-size="13" class="mono">Whisper • ArcFace • 3DDFA</text>
+</g>
+
+<!-- Bottom row -->
+<rect x="18" y="752" width="500" height="220" rx="16" class="panel"/>
+<text x="44" y="788" fill="#00d9ff" class="mono" font-size="18">SYSTEM TERMINAL</text>
+<text x="45" y="825" fill="#41ff83" class="mono small">rv@ai-os:~$ whoami</text>
+<text x="45" y="850" fill="#dffbff" class="mono small">&gt; Aarvee Wadhwa</text>
+<text x="45" y="878" fill="#41ff83" class="mono small">rv@ai-os:~$ mission --status</text>
+<text x="45" y="903" fill="#dffbff" class="mono small">&gt; Building intelligent systems</text>
+<text x="45" y="927" fill="#dffbff" class="mono small">&gt; that solve real-world problems.</text>
+<text x="45" y="952" fill="#41ff83" class="mono small">rv@ai-os:~$ learning --never-stop</text>
+
+<rect x="538" y="752" width="520" height="220" rx="16" class="panel"/>
+<text x="565" y="788" fill="#00d9ff" class="mono" font-size="18">CURRENT FOCUS</text>
+<g fill="#dffbff" class="mono small">
+<text x="565" y="830">› Multi-Agent AI Systems</text>
+<text x="565" y="860">› RAG &amp; LLM Applications</text>
+<text x="565" y="890">› Explainable / Trustworthy AI</text>
+<text x="565" y="920">› Computer Vision</text>
+<text x="565" y="950">› Multimodal Systems</text>
+</g>
+
+<rect x="1078" y="752" width="504" height="220" rx="16" class="panel"/>
+<text x="1105" y="788" fill="#00d9ff" class="mono" font-size="18">CONNECT</text>
+<text x="1105" y="835" fill="#ffffff" class="mono small">GitHub     github.com/AarveeWadhwa</text>
+<text x="1105" y="875" fill="#ffffff" class="mono small">LinkedIn   linkedin.com/in/aarveewadhwa</text>
+<text x="1105" y="915" fill="#ffffff" class="mono small">LeetCode   leetcode.com/u/RVWadhwa/</text>
+<text x="1105" y="955" fill="#41ff83" class="mono small">STATUS: OPEN TO BUILDING COOL THINGS</text>
+
+<!-- Footer -->
+<rect x="18" y="990" width="1564" height="42" rx="12" fill="#020711" stroke="#00d9ff" stroke-opacity=".55"/>
+<text x="800" y="1018" text-anchor="middle" fill="#00d9ff" class="mono" font-size="17" letter-spacing="5">BUILD • LEARN • SHIP • IMPACT</text>
+</svg>
