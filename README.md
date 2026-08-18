@@ -1,220 +1,73 @@
 <div align="center">
 
-<img src="./assets/hero.png" width="100%" alt="Aarvee Wadhwa — AI/ML Engineer">
+<img src="./assets/dashboard.svg" width="100%" alt="Aarvee Wadhwa AI Systems Dashboard">
 
-### ⚡ BUILD • LEARN • SHIP • IMPACT
+<br>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aarveewadhwa)
-[![LeetCode](https://img.shields.io/badge/LeetCode-RVWadhwa-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/RVWadhwa/)
-[![GitHub](https://img.shields.io/badge/GitHub-AarveeWadhwa-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AarveeWadhwa)
+[![LinkedIn](https://img.shields.io/badge/LINKEDIN-CONNECT-00D9FF?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aarveewadhwa)
+[![LeetCode](https://img.shields.io/badge/LEETCODE-RVWadhwa-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/RVWadhwa/)
+[![GitHub](https://img.shields.io/badge/GITHUB-AarveeWadhwa-00D9FF?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AarveeWadhwa)
 
 </div>
 
 ---
 
-## 🛰️ CURRENTLY BUILDING
+## `> SYSTEM.MISSION`
 
-### `TruthGraph`
+I build AI systems that go beyond generating an answer — systems that can **retrieve evidence, reason over information, verify outputs, and turn models into useful products.**
 
-> **Can an AI prove what it says?**
+### `CURRENT_BUILD`
+
+**TruthGraph** — a Dynamic Evidence Graph for explainable multi-agent fact verification.
+
+`Claim → Retrieve → Analyze → Verify → Evidence Graph → Verdict`
+
+---
+
+## `// FEATURED SYSTEMS`
+
+| System | What it does |
+|---|---|
+| 🔎 **TruthGraph** | Evidence graph + multi-agent fact verification using Llama 3.1, LangChain and Neo4j |
+| 🧠 **JOY** | Multimodal AI therapist using NLP, speech and computer vision |
+| 🧭 **Persona** | Personalized safety navigation using risk, user preferences and routing |
+| 👤 **Identif.ai** | Forensic narration → facial attributes → 3D face reconstruction |
+
+---
+
+## `// AI_PIPELINE`
 
 ```text
-CLAIM
+INPUT
   │
-  ├──────────────┬──────────────┐
-  ▼              ▼              ▼
-SOURCE          SOURCE         SOURCE
-  │              │              │
-  └──────────────┼──────────────┘
-                 ▼
-          EVIDENCE GRAPH
-                 │
-        ┌────────┴────────┐
-        ▼                 ▼
-    SUPPORT          CONTRADICTION
-        │                 │
-        └────────┬────────┘
-                 ▼
-        EXPLAINABLE VERDICT
+  ├── TEXT ──┐
+  ├── AUDIO ─┼──► AI MODELS ──► RETRIEVE ──► REASON
+  └── IMAGE ─┘                         │
+                                      ▼
+                                   VERIFY
+                                      │
+                                      ▼
+                                  EXPLAIN
+                                      │
+                                      ▼
+                                   PRODUCT
 ```
 
-A multi-agent fact-verification system using **LangChain, Llama 3.1, Neo4j and FastAPI** to retrieve evidence, reason over relationships, and produce auditable verdicts.
+---
 
-**The idea:** move from *"the LLM said it"* → *"here is why the system believes it."*
+## `// TECH_INTERFACE`
 
-[🔎 Explore TruthGraph](https://github.com/AarveeWadhwa)
+`Python` `PyTorch` `TensorFlow/Keras` `Transformers` `HuggingFace` `LangChain` `Llama` `Neo4j` `FastAPI` `React` `Node.js` `MongoDB` `MySQL` `Docker` `OpenCV`
+
+**AI:** NLP · Computer Vision · Deep Learning · LLMs · RAG · Multi-Agent Systems · Explainable AI · Multimodal AI
 
 ---
 
-## 🧪 THINGS I'VE BUILT
+## `// LIVE_LINKS`
 
-<table>
-<tr>
-<td width="33%" align="center">
-
-### 🔎 TruthGraph
-
-**Evidence + Agents + Graphs**
-
-`Llama 3.1`  
-`Neo4j`  
-`LangChain`  
-`FastAPI`
-
-**Verify before you trust.**
-
-</td>
-
-<td width="33%" align="center">
-
-### 🧠 JOY
-
-**Multimodal AI**
-
-`RoBERTa`  
-`Wav2Vec2`  
-`Swin`
-
-**Text + Voice + Vision**
-
-</td>
-
-<td width="33%" align="center">
-
-### 👤 Identif.ai
-
-**Forensic AI**
-
-`Whisper`  
-`ArcFace`  
-`3DDFA`
-
-**Narration → 3D Face**
-
-</td>
-</tr>
-</table>
-
----
-
-## 🧠 HOW I THINK ABOUT AI
-
-```text
-                    MODEL
-                      │
-        ┌─────────────┼─────────────┐
-        ▼             ▼             ▼
-      DATA         RETRIEVAL      CONTEXT
-        │             │             │
-        └─────────────┼─────────────┘
-                      ▼
-                   REASON
-                      │
-                      ▼
-                   VERIFY
-                      │
-                      ▼
-                  EXPLAIN
-                      │
-                      ▼
-                   PRODUCT
-```
-
-**Model ≠ Product.**
-
-The interesting engineering happens around the model.
-
----
-
-## 🛠️ MY PLAYGROUND
-
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=python,pytorch,tensorflow,java,cpp,c,fastapi,react,nodejs,mongodb,mysql,neo4j,docker,git,github&perline=8" />
-
-<br><br>
-
-`NLP` · `Computer Vision` · `Transformers` · `RAG` · `LLMs` · `Multi-Agent AI`
-
-</div>
-
----
-
-## 📈 LIVE PROFILE
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=AarveeWadhwa&show_icons=true&hide_border=true&rank_icon=github&theme=transparent" height="165">
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AarveeWadhwa&layout=compact&hide_border=true&theme=transparent" height="165">
-
-<br>
-
-<img src="https://streak-stats.demolab.com?user=AarveeWadhwa&hide_border=true&theme=transparent" height="165">
-
-</div>
-
----
-
-## 🧩 DSA MODE
-
-<div align="center">
-
-<a href="https://leetcode.com/u/RVWadhwa/">
-
-<img src="https://leetcard.jacoblin.cool/RVWadhwa?theme=dark&font=baloo&ext=heatmap" width="700" alt="RVWadhwa LeetCode">
-
-</a>
-
-<br>
-
-**I don't just write code. I debug it until I understand it.**
-
-</div>
-
----
-
-## ⚡ BEYOND THE MODEL
-
-```text
-        ┌───────────────┐
-        │   HACKATHONS  │
-        └───────┬───────┘
-                │
-     ┌──────────┼──────────┐
-     ▼          ▼          ▼
-   RESEARCH     DSA      BUILDING
-     │          │          │
-     └──────────┼──────────┘
-                ▼
-          BETTER SYSTEMS
-```
-
-🥇 **Smart India Hackathon — University Selection**
-
-🤖 **AI Coordinator — Google Developer Students Club**
-
-💻 **Programming Community — Codex**
-
-🚀 **Entrepreneurship Promotion & Innovation Cell**
-
----
-
-## 🌌 WHAT I'M EXPLORING NOW
-
-`Generative AI`
-
-`RAG`
-
-`Agentic AI`
-
-`AI Evaluation`
-
-`Trustworthy AI`
-
-`Multimodal Systems`
-
-`System Design`
+- 🔗 **LinkedIn:** https://www.linkedin.com/in/aarveewadhwa
+- 🧩 **LeetCode:** https://leetcode.com/u/RVWadhwa/
+- 🐙 **GitHub:** https://github.com/AarveeWadhwa
 
 ---
 
@@ -222,14 +75,6 @@ The interesting engineering happens around the model.
 
 ### `BUILD → BREAK → DEBUG → LEARN → BUILD BETTER`
 
-<br>
-
-[![LinkedIn](https://img.shields.io/badge/LET'S_CONNECT-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aarveewadhwa)
-&nbsp;
-[![LeetCode](https://img.shields.io/badge/LET'S_CODE-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/RVWadhwa/)
-
-<br><br>
-
-<sub>AI / ML • GenAI • RAG • Multimodal AI • Software Engineering</sub>
+**CODE IS MY LANGUAGE • AI IS MY SUPERPOWER**
 
 </div>
