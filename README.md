@@ -4,7 +4,7 @@ Artificial Intelligence Operating System
 
 <div align="center">
 
-# 👋 Hi, I'm Aarvee Wadhwa
+#  Hi, I'm Aarvee Wadhwa
 
 ### AI / ML Engineer • B.Tech CSE (AI & ML) • Builder
 
@@ -18,7 +18,7 @@ Artificial Intelligence Operating System
 
 </div>
 
-## 🧠 What I Build
+##  What I Build
 
 ```text
         REAL-WORLD PROBLEM
@@ -49,7 +49,7 @@ I enjoy building the **system around the model**:
 
 ---
 
-# 🚀 Featured Projects
+#  Featured Projects
 
 ### 🔎 TruthGraph
 **Multi-Agent Fact Verification & Dynamic Evidence Graph**
@@ -62,7 +62,7 @@ Built a Dynamic Evidence Graph with **Neo4j** and designed **Consensus-Weighted 
 
 ---
 
-### 🧠 JOY — AI-Powered Virtual Therapist
+###  JOY — AI-Powered Virtual Therapist
 
 A multimodal emotion analysis system processing **text, voice, and facial expressions** to deliver personalized AI interaction.
 
@@ -72,7 +72,7 @@ Implemented late-fusion emotion recognition using **RoBERTa, Wav2Vec2, and Swin 
 
 ---
 
-### 👤 Identif.ai
+###  Identif.ai
 **Forensic Audio → Facial Attributes → 3D Reconstruction**
 
 An end-to-end forensic pipeline converting eyewitness verbal narration into **2D facial sketches and photorealistic 3D facial models**.
@@ -83,7 +83,7 @@ Integrated Whisper ASR, spaCy facial-attribute extraction, Stable Diffusion, Arc
 
 ---
 
-# ⚙️ Tech Stack
+#  Tech Stack
 
 ### Languages
 
@@ -105,7 +105,7 @@ Integrated Whisper ASR, spaCy facial-attribute extraction, Stable Diffusion, Arc
 
 ---
 
-# 📊 GitHub Activity
+#  GitHub Activity
 
 <div align="center">
 
@@ -121,7 +121,7 @@ Integrated Whisper ASR, spaCy facial-attribute extraction, Stable Diffusion, Arc
 
 ---
 
-# 🧩 LeetCode
+#  LeetCode
 
 <div align="center">
 
@@ -137,25 +137,15 @@ Integrated Whisper ASR, spaCy facial-attribute extraction, Stable Diffusion, Arc
 
 </div>
 
----
 
-# 🏆 Achievements & Leadership
 
-- 🥇 **Selected for Smart India Hackathon (SIH)** at university level
-- 🤖 **AI Coordinator — Google Developer Students Club (2024–2025)**
-- 💻 **Programming Community Member — Codex (2024–2025)**
-- 🚀 **Coordinator — Entrepreneurship Promotion & Innovation Cell (2023–2024)**
-- 🧪 Participated in multiple hackathons focused on rapid prototyping and team-based problem solving
-
----
-
-# 🎯 Currently Exploring
+#  Currently Exploring
 
 `Generative AI` · `LLM Applications` · `RAG` · `Multi-Agent Systems` · `AI Evaluation` · `Trustworthy AI` · `Multimodal AI` · `System Design`
 
 ---
 
-# 🔁 My Engineering Loop
+#  My Engineering Loop
 
 ```text
        BUILD
