@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RV.NEURAL // Aarvee Wadhwa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#030810;--panel:rgba(6,18,31,.82);--line:#17344b;--cyan:#35e7ff;--blue:#4d8dff;--violet:#a66cff;--green:#68f5a3;--text:#e8f7ff;--muted:#7290a5}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:"JetBrains Mono",monospace}body{overflow-x:hidden}
+#network{position:absolute;inset:0;width:100%;height:100%;z-index:0;display:block;cursor:crosshair}
+.scan{position:fixed;inset:0;z-index:1;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0,rgba(255,255,255,.018) 1px,transparent 1px,transparent 5px);mix-blend-mode:screen}
+.app{position:relative;z-index:2;min-height:100vh;padding:28px;display:flex;flex-direction:column}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+.brand{letter-spacing:.14em;font-weight:700;font-size:15px;color:var(--cyan)}.sub{color:var(--muted);font-size:11px;margin-top:7px}
+.status{border:1px solid #1d465d;background:rgba(3,15,25,.72);padding:9px 13px;border-radius:999px;font-size:10px;color:var(--green);letter-spacing:.12em}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green);margin-right:7px}
+.center{width:min(1080px,100%);margin:8vh auto 0;text-align:center}
+h1{font-size:clamp(36px,7vw,78px);margin:0;letter-spacing:-.06em;line-height:1}.role{margin:17px 0 0;color:#9eb8c9;font-size:12px;letter-spacing:.2em}
+.core{margin:40px auto 0;width:min(720px,100%);height:380px;border:1px solid #16394f;background:linear-gradient(180deg,rgba(5,20,34,.76),rgba(2,9,17,.45));border-radius:24px;box-shadow:0 0 80px rgba(53,231,255,.07),inset 0 0 50px rgba(53,231,255,.025);position:relative;overflow:hidden}
+.core:before{content:"";position:absolute;z-index:0;pointer-events:none;inset:0;background-image:linear-gradient(rgba(53,231,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(53,231,255,.045) 1px,transparent 1px);background-size:32px 32px;mask-image:linear-gradient(to bottom,transparent,black 20%,black 80%,transparent)}
+.coretitle{position:absolute;z-index:2;top:18px;left:20px;font-size:10px;color:#54768b;letter-spacing:.15em}
+.hint{position:absolute;z-index:2;bottom:18px;left:0;right:0;font-size:10px;color:#5f7e91}.hint b{color:var(--cyan)}
+.actions{display:flex;justify-content:center;gap:10px;margin-top:18px;flex-wrap:wrap}
+button,.btn{font:inherit;font-size:10px;color:var(--cyan);border:1px solid #24536b;background:rgba(4,17,28,.82);padding:10px 14px;border-radius:8px;text-decoration:none;cursor:pointer;letter-spacing:.08em}button:hover,.btn:hover{border-color:var(--cyan);box-shadow:0 0 20px rgba(53,231,255,.1)}
+.panel{display:none;width:min(1080px,100%);margin:26px auto 0;grid-template-columns:1.4fr .8fr;gap:14px}.panel.open{display:grid}.card{border:1px solid #16394f;background:var(--panel);border-radius:14px;padding:20px;backdrop-filter:blur(12px)}.card h2{font-size:12px;color:var(--cyan);letter-spacing:.13em;margin:0 0 16px}.card p{font-size:11px;color:#a9c0cf;line-height:1.8}.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{font-size:9px;color:#8ecbff;border:1px solid #1b4661;border-radius:999px;padding:6px 8px}
+.projects{display:grid;grid-template-columns:1fr 1fr;gap:9px}.project{border:1px solid #16364b;padding:12px;border-radius:10px;cursor:pointer}.project:hover{border-color:var(--cyan);background:rgba(53,231,255,.035)}.project strong{display:block;font-size:11px}.project span{display:block;color:#69879a;font-size:9px;margin-top:6px}
+.stat{display:flex;justify-content:space-between;border-bottom:1px solid #122d40;padding:9px 0;font-size:10px}.stat:last-child{border:0}.stat b{color:var(--green)}
+footer{margin:40px auto 12px;color:#426176;font-size:9px;letter-spacing:.12em}
+@media(max-width:760px){.app{padding:17px}.panel.open{grid-template-columns:1fr}.core{height:320px}.role{line-height:1.8}.projects{grid-template-columns:1fr}}
+
+.detail-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.detail-type,.label{font-size:9px;color:#5f879d;letter-spacing:.12em}.live-badge{font-size:9px;color:#68f5a3;border:1px solid #205b48;border-radius:999px;padding:6px 9px}.detail-desc{font-size:12px!important;color:#d7eaf4!important;line-height:1.8!important}.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}.detail-grid p{margin:7px 0 0}.detail-btn{display:inline-block;margin-top:14px}.project-detail{min-height:270px}@media(max-width:760px){.detail-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="scan"></div>
+<div class="app">
+  <div class="top">
+    <div><div class="brand">RV.NEURAL // PERSONAL AI GRAPH</div><div class="sub">AARVEE WADHWA · AI / ML · RESEARCH · SYSTEMS</div></div>
+    <div class="status"><span class="dot"></span>LIVE CORE</div>
+  </div>
+
+  <main class="center">
+    <h1>NEURAL CORE</h1>
+    <div class="role">RETRIEVE · REASON · VERIFY · BUILD</div>
+
+    <section class="core" id="core"><canvas id="network"></canvas>
+      <div class="coretitle">INTERACTIVE NEURAL NETWORK / DRAG NODES / CLICK NODES</div>
+      <div class="hint"><b>INITIALIZE</b> the network · drag a node · click a system</div>
+    </section>
+
+    <div class="actions">
+      <button id="init">INITIALIZE NETWORK</button>
+      <button id="pulse">SEND SIGNAL</button>
+      <button id="reset">RESET</button>
+      <a class="btn" href="https://github.com/AarveeWadhwa" target="_blank">GITHUB</a>
+      <a class="btn" href="https://leetcode.com/u/RVWadhwa/" target="_blank">LEETCODE</a>
+    </div>
+
+    <section class="panel" id="panel">
+      <div class="card project-detail">
+        <div class="detail-head"><div><h2 id="selectedTitle">SYSTEM NODE</h2><div class="detail-type" id="selectedType">SYSTEM</div></div><div class="live-badge">● ACTIVE</div></div>
+        <p class="detail-desc" id="selectedText">Select a project node in the neural graph.</p>
+        <div class="detail-grid">
+          <div><span class="label">MISSION</span><p id="selectedMission"></p></div>
+          <div><span class="label">PIPELINE</span><p id="selectedPipeline"></p></div>
+        </div>
+        <div class="chips" id="selectedTags"></div>
+        <a id="selectedRepo" class="btn detail-btn" href="https://github.com/AarveeWadhwa" target="_blank">VIEW ON GITHUB ↗</a>
+      </div>
+      <div class="card">
+        <h2>LIVE TELEMETRY</h2>
+        <div class="stat"><span>NETWORK NODES</span><b id="nodeCount">0</b></div>
+        <div class="stat"><span>ACTIVE CONNECTIONS</span><b id="edgeCount">0</b></div>
+        <div class="stat"><span>SIGNAL PULSES</span><b id="pulseCount">0</b></div>
+        <div class="stat"><span>SELECTED SYSTEM</span><b id="selectedMetric">—</b></div>
+        <div class="stat"><span>CORE STATUS</span><b>ONLINE</b></div>
+      </div>
+    </section>
+  </main>
+  <footer>RV.NEURAL · THIS GRAPH IS A LIVE INTERFACE, NOT AN IMAGE</footer>
+</div>
+
+<script>
+const canvas=document.getElementById("network"),ctx=canvas.getContext("2d"),core=document.getElementById("core");
+let W,H,dpr,nodes=[],edges=[],particles=[],running=false,pulses=0,drag=null,raf=0;
+const info={
+ "INPUT":{type:"ENTRY LAYER",text:"The starting point for real-world problems, claims, user context and multimodal signals.",mission:"Turn an open-ended problem into structured information that downstream AI systems can reason over.",pipeline:"INPUT → REPRESENT → RETRIEVE → REASON",tags:["PROBLEM","DATA","MULTIMODAL"],metric:"INPUT"},
+ "TRUTHGRAPH":{type:"EVIDENCE AI",text:"A Dynamic Evidence Graph for explainable multi-agent fact verification. Claims are decomposed, evidence is retrieved, agents evaluate support or contradiction, and the evidence relationships are preserved as a graph.",mission:"Make AI verification more transparent by showing why a claim is supported, contradicted or uncertain instead of returning only a final verdict.",pipeline:"CLAIM → RETRIEVE → ANALYZE → VERIFY → EVIDENCE GRAPH → VERDICT",tags:["RAG","LLM","MULTI-AGENT","XAI","NEO4J","LANGCHAIN"],metric:"TRUTHGRAPH"},
+ "JOY":{type:"MULTIMODAL AI THERAPIST",text:"A multimodal AI therapist for students that combines text, speech and image-based emotion understanding with an LLM to create more context-aware supportive interactions.",mission:"Combine multiple emotional signals so the assistant can respond using more than the user's typed words alone.",pipeline:"TEXT + AUDIO + IMAGE → EMOTION FUSION → LLM → RESPONSE",tags:["RoBERTa","Wav2Vec2","Swin Tiny","LLAMA","FAISS","CHAINLIT"],metric:"JOY"},
+ "PERSONA":{type:"PERSONALIZED SAFETY NAVIGATION",text:"A personalized navigation system that considers user preferences and route-level safety rather than optimizing only for distance or travel time.",mission:"Find routes that balance navigation efficiency with personalized safety signals such as accident risk and women-safety context.",pipeline:"USER PROFILE → RISK SCORE → ROUTE OPTIONS → PERSONALIZED PATH",tags:["PYTHON","ML","MAPS","SAFETY","PERSONALIZATION"],metric:"PERSONA"},
+ "IDENTIF.AI":{type:"FORENSIC AI",text:"An audio-to-facial-attributes pipeline for forensic reconstruction: verbal narration is transcribed and converted into structured facial descriptors before 2D/3D face reconstruction.",mission:"Translate verbal facial descriptions into machine-readable attributes and use them as conditioning signals for forensic face reconstruction.",pipeline:"AUDIO → WHISPER ASR → ATTRIBUTES → FACE FEATURES → 3D RECONSTRUCTION",tags:["WHISPER","SPACY","ARCFACE","RETINAFACE","3DDFA","OPEN3D"],metric:"IDENTIF.AI"},
+ "VISION":{type:"COMPUTER VISION",text:"The visual intelligence layer behind face, emotion and image understanding workflows.",mission:"Extract useful visual representations and structured facial information for downstream AI systems.",pipeline:"IMAGE → DETECT → EMBED → ANALYZE → STRUCTURED FEATURES",tags:["OPENCV","ARCFACE","RETINAFACE","SWIN"],metric:"VISION"},
+ "LLM":{type:"REASONING CORE",text:"The language-model layer used for reasoning, generation, retrieval-augmented workflows and multi-agent orchestration.",mission:"Move from isolated model predictions toward systems that retrieve context, reason over evidence and produce useful outputs.",pipeline:"CONTEXT → RETRIEVE → PROMPT → REASON → OUTPUT",tags:["LLM","RAG","AGENTS","PROMPTING"],metric:"LLM"},
+ "OUTPUT":{type:"SYSTEM OUTPUT",text:"The final layer: useful, explainable AI products rather than disconnected model demos.",mission:"Turn model capabilities into systems that people can interact with, inspect and use for real-world problems.",pipeline:"REASON → VERIFY → EXPLAIN → PRODUCT",tags:["PRODUCT","XAI","IMPACT","SYSTEMS"],metric:"OUTPUT"}
+};
+const colors=["#35e7ff","#4d8dff","#a66cff","#68f5a3"];
+function resize(){dpr=devicePixelRatio||1;W=core.clientWidth;H=core.clientHeight;canvas.width=W*dpr;canvas.height=H*dpr;canvas.style.width=W+"px";canvas.style.height=H+"px";ctx.setTransform(dpr,0,0,dpr,0,0)}
+function make(){
+ const names=["INPUT","TRUTHGRAPH","JOY","PERSONA","IDENTIF.AI","VISION","LLM","OUTPUT"];
+ const pos=[[.12,.50],[.37,.22],[.37,.50],[.37,.78],[.60,.50],[.60,.22],[.60,.78],[.88,.50]];
+ nodes=names.map((name,i)=>({name,x:W*pos[i][0],y:H*pos[i][1],vx:0,vy:0,r:name==="TRUTHGRAPH"?20:15,active:false}));
+ const pairs=[[0,1],[0,2],[0,3],[1,4],[1,5],[2,4],[2,6],[3,4],[3,6],[4,7],[5,7],[6,7]];
+ edges=pairs.map(([a,b])=>({a,b}));
+ document.getElementById("nodeCount").textContent=nodes.length;document.getElementById("edgeCount").textContent=edges.length;
+}
+function draw(){
+ ctx.clearRect(0,0,W,H);
+ for(const e of edges){let a=nodes[e.a],b=nodes[e.b];ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.strokeStyle="#16425a";ctx.lineWidth=1.2;ctx.stroke()}
+ for(const p of particles){let a=nodes[p.a],b=nodes[p.b];p.t+=.012;let x=a.x+(b.x-a.x)*p.t,y=a.y+(b.y-a.y)*p.t;ctx.beginPath();ctx.arc(x,y,3,0,Math.PI*2);ctx.fillStyle=p.color;ctx.shadowBlur=16;ctx.shadowColor=p.color;ctx.fill();ctx.shadowBlur=0}
+ for(const n of nodes){
+   const c=n.active?"#ffffff":colors[nodes.indexOf(n)%colors.length];
+   ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,Math.PI*2);ctx.fillStyle="rgba(4,16,28,.96)";ctx.fill();ctx.strokeStyle=c;ctx.lineWidth=n.active?3:1.5;ctx.shadowBlur=n.active?28:12;ctx.shadowColor=c;ctx.stroke();ctx.shadowBlur=0;
+   ctx.fillStyle=c;ctx.font="600 9px 'JetBrains Mono'";ctx.textAlign="center";ctx.fillText(n.name,n.x,n.y+n.r+16);
+ }
+ if(running)raf=requestAnimationFrame(draw);
+}
+function pulseAll(){for(const e of edges)particles.push({a:e.a,b:e.b,t:0,color:colors[Math.floor(Math.random()*colors.length)]});pulses++;document.getElementById("pulseCount").textContent=pulses;setTimeout(()=>{particles=particles.filter(p=>p.t<1)},900);if(!running){running=true;draw();setTimeout(()=>{running=false},1000)}}
+function show(n){const d=info[n.name]||{};nodes.forEach(x=>x.active=false);n.active=true;document.getElementById("panel").classList.add("open");document.getElementById("selectedTitle").textContent=n.name;document.getElementById("selectedType").textContent=d.type||"SYSTEM";document.getElementById("selectedText").textContent=d.text||"AI system node.";document.getElementById("selectedMission").textContent=d.mission||"";document.getElementById("selectedPipeline").textContent=d.pipeline||"";document.getElementById("selectedMetric").textContent=d.metric||n.name;document.getElementById("selectedTags").innerHTML=(d.tags||[]).map(t=>`<span class="chip">${t}</span>`).join("");pulseAll()}
+function point(ev){const r=canvas.getBoundingClientRect();return{x:ev.clientX-r.left,y:ev.clientY-r.top}}
+canvas.addEventListener("pointerdown",e=>{const p=point(e);drag=nodes.find(n=>Math.hypot(n.x-p.x,n.y-p.y)<n.r+10);if(drag){canvas.setPointerCapture(e.pointerId);drag.active=true}});
+canvas.addEventListener("pointermove",e=>{if(!drag)return;const p=point(e);drag.x=Math.max(25,Math.min(W-25,p.x));drag.y=Math.max(25,Math.min(H-25,p.y));draw()});
+canvas.addEventListener("pointerup",e=>{if(drag){const n=drag;drag=null;show(n)}});
+document.getElementById("init").onclick=()=>{running=true;make();draw();pulseAll()};
+document.getElementById("pulse").onclick=pulseAll;
+document.getElementById("reset").onclick=()=>{nodes.forEach(n=>n.active=false);document.getElementById("panel").classList.remove("open");particles=[];running=false;make();draw()};
+window.addEventListener("resize",()=>{resize();make();draw()});
+resize();make();running=true;draw();
+</script>
+</body>
+</html>
