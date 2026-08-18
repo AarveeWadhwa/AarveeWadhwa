@@ -42,7 +42,7 @@
 
 ---
 
-## `SYSTEM.IDENTITY`
+## SYSTEM.IDENTITY
 
 I build AI systems that go beyond generating an answer —
 
@@ -54,7 +54,7 @@ Currently exploring:
 
 ---
 
-## `// SYSTEMS`
+## SYSTEMS
 
 | SYSTEM | PURPOSE |
 |---|---|
