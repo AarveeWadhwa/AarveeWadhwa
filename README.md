@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧠 RV.NEURAL
+#  RV.NEURAL
 
 ### AARVEE WADHWA
 
@@ -26,7 +26,7 @@
 
 <div align="center">
 
-## ⚡ LIVE NEURAL CORE
+##  LIVE NEURAL CORE
 
 <a href="https://aarveewadhwa.github.io/rv-neural/">
 
@@ -58,24 +58,7 @@ Currently exploring:
 
 | SYSTEM | PURPOSE |
 |---|---|
-| 🔎 **TruthGraph** | Dynamic evidence graph for explainable multi-agent fact verification |
-| 🧠 **JOY** | Multimodal AI therapist combining text, speech and computer vision |
-| 🧭 **Persona** | Personalized safety navigation using risk-aware routing |
-| 👤 **Identif.ai** | Forensic AI pipeline from narration → facial attributes → 3D reconstruction |
-
----
-
-## `// CURRENT BUILD`
-
-```text
-CLAIM
-   ↓
-RETRIEVE
-   ↓
-ANALYZE
-   ↓
-VERIFY
-   ↓
-EVIDENCE GRAPH
-   ↓
-VERDICT
+|  **TruthGraph** | Dynamic evidence graph for explainable multi-agent fact verification |
+|  **JOY** | Multimodal AI therapist combining text, speech and computer vision |
+|  **Persona** | Personalized safety navigation using risk-aware routing |
+|  **Identif.ai** | Forensic AI pipeline from narration → facial attributes → 3D reconstruction |
